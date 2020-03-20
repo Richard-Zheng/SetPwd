@@ -22,4 +22,7 @@
     <string name="dialog_no_device_admin_permission">No device admin permission</string>
     <string name="menu_set_maximum_failed_passwords_for_wipe">Set maximum failed passwords for wipe</string>
     <string name="menu_wipe_all_data">Wipe all data</string>
+    <string name="toast_confirm_wipe_failed">Please check the text you entered</string>
+    <string name="wipe_all_data_description">Are you sure you want to clear the data of this device? If you know the consequences of doing so and are still willing, enter \"yes\" in the input box below and click OK.</string>
+    <string name="activitytittle_confirm_wipe">Confirm clear all data</string>
 </resources>

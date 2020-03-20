@@ -3,7 +3,7 @@
     <string name="edit_message">输入要设置的密码</string>
     <string name="button_send">确认</string>
     <string name="edit_message_again">再次输入密码</string>
-    <string name="text_description">此应用能够通过设备管理员API设置锁屏密码\n\n请先给予此应用设备管理员权限\n\n您的密码必须为4-16位\n\n注意：在Android N或更高版本，Google限制了API的使用。您可能需要先删去原有的密码，再使用此APP设置。</string>
+    <string name="text_description">此应用能够通过设备管理员API设置锁屏密码\n\n请先给予此应用设备管理员权限\n\n您的密码必须为4~16位\n\n注意：在Android N或更高版本，Google限制了API的使用。您可能需要先删去原有的密码，再使用此APP设置。</string>
     <string name="ensure_set_tittle">设置锁屏密码</string>
     <string name="device_admin_description">要设置锁屏密码，您需要授予权限</string>
     <string name="ensure_set_text">你的锁屏密码将被设置为</string>
@@ -20,4 +20,7 @@
     <string name="dialog_no_device_admin_permission">未获取到设备管理员权限</string>
     <string name="menu_set_maximum_failed_passwords_for_wipe">设置超过5次错误密码清除所有数据</string>
     <string name="menu_wipe_all_data">清除所有数据</string>
+    <string name="toast_confirm_wipe_failed">请检查输入的文本</string>
+    <string name="wipe_all_data_description">确定清空此设备的数据吗？如果你清楚这样做的后果并仍然愿意，请在下方的输入框中输入“yes”，再点击确定。</string>
+    <string name="activitytittle_confirm_wipe">确认清空数据</string>
 </resources>
