@@ -25,4 +25,5 @@
     <string name="activitytittle_confirm_wipe">确认清空数据</string>
     <string name="about_description">SetPwd 能够通过设备管理员权限，帮助您在某些不方便的情况下设置锁屏密码。\n\n例如，设备本身带有相关安全策略阻止您任意设置密码时。\n\n作者：Richard Zheng\n\n源代码：https://github.com/Richard-Zheng/SetPwd\n\n如果您使用过程中遇到问题，请至GitHub发issue。</string>
     <string name="menu_about">关于</string>
+    <string name="version_update_history">版本更新记录</string>
 </resources>
