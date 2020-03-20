@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/set_maximum_failed_pwd"
+        android:title="设置超过5次错误密码清除所有数据"/>
+    <item android:id="@+id/wipe_all_data"
+        android:title="清除所有数据"/>
+</menu>

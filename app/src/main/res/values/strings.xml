@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name" translatable="false">SetPwd</string>
+    <string name="button_send">Set</string>
+    <string name="edit_message">Enter password</string>
+    <string name="edit_message_again">Enter password again</string>
+    <string name="text_description">This app can help you set lockscreen password.\n\nPlease first give the Device Admin permission to this app.\n\nYour password must be 4 - 16 digits.\n\nNotice: On Android N or higher, Google restricts the use of the API. You may need to delete the original password before using this APP to set it up.
+    </string>
+    <string name="ensure_set_tittle">Set lock screen password?</string>
+    <string name="device_admin" translatable="false">SetPwd</string>
+    <string name="device_admin_description">To set lock screen password, you need to grant permission</string>
+    <string name="ensure_set_text">Your lock screen password will be set as</string>
+    <string name="dialog_positive">Yes</string>
+    <string name="dialog_negative">No</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_warning">Warning</string>
+    <string name="dialog_contains_special_characters">The password contains characters other than letters and numbers. Do you want to continue setting?</string>
+    <string name="dialog_failed">Failed</string>
+    <string name="dialog_failed_length">The password length does not meet the requirements.</string>
+    <string name="dialog_failed_donotmatch">The passwords entered twice do not match.</string>
+    <string name="checkbox_device_admin">Enable Device Admin</string>
+</resources>

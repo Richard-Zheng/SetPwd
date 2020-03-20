@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="edit_message">输入要设置的密码</string>
+    <string name="button_send">确认</string>
+    <string name="edit_message_again">再次输入密码</string>
+    <string name="text_description">此应用能够通过设备管理员API设置锁屏密码\n\n请先给予此应用设备管理员权限\n\n您的密码必须为4-16位\n\n注意：在Android N或更高版本，Google限制了API的使用。您可能需要先删去原有的密码，再使用此APP设置。</string>
+    <string name="ensure_set_tittle">设置锁屏密码</string>
+    <string name="device_admin_description">要设置锁屏密码，您需要授予权限</string>
+    <string name="ensure_set_text">你的锁屏密码将被设置为</string>
+    <string name="dialog_positive">确定</string>
+    <string name="dialog_negative">取消</string>
+    <string name="dialog_ok">确认</string>
+    <string name="dialog_warning">警告</string>
+    <string name="dialog_contains_special_characters">密码中含有除字母和数字之外的字符，是否继续设置？</string>
+    <string name="dialog_failed">错误</string>
+    <string name="dialog_failed_length">密码长度不符合要求</string>
+    <string name="dialog_failed_donotmatch">两次输入的密码不一致</string>
+    <string name="checkbox_device_admin">授予设备管理员权限</string>
+</resources>
