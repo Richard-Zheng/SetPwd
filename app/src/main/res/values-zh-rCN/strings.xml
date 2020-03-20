@@ -16,4 +16,8 @@
     <string name="dialog_failed_length">密码长度不符合要求</string>
     <string name="dialog_failed_donotmatch">两次输入的密码不一致</string>
     <string name="checkbox_device_admin">授予设备管理员权限</string>
+    <string name="toast_set_maximum_failed_passwords_for_wipe">已设置错误密码尝试上限为5，如需解除限制请取消设备管理员权限。</string>
+    <string name="dialog_no_device_admin_permission">未获取到设备管理员权限</string>
+    <string name="menu_set_maximum_failed_passwords_for_wipe">设置超过5次错误密码清除所有数据</string>
+    <string name="menu_wipe_all_data">清除所有数据</string>
 </resources>

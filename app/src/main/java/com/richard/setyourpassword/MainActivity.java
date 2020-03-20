@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.set_maximum_failed_pwd:
                 dpm.setMaximumFailedPasswordsForWipe(mDeviceAdminSample, 5);
-                Toast.makeText(MainActivity.this, "已设置错误密码尝试上限为5，如需解除限制请取消设备管理员权限。", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.toast_set_maximum_failed_passwords_for_wipe, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.wipe_all_data:
                 AlertDialog dialog = new AlertDialog.Builder(this)
@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity {
         } else {
             AlertDialog dialog = new AlertDialog.Builder(this)
                     .setTitle(R.string.dialog_failed)//设置对话框的标题
-                    .setMessage("未获取到设备管理员权限")//设置对话框的内容
+                    .setMessage(R.string.dialog_no_device_admin_permission)//设置对话框的内容
                     //设置对话框的按钮
                     .setPositiveButton(R.string.dialog_ok, new DialogInterface.OnClickListener() {
                         @Override
