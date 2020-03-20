@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".AboutActivity"
+            android:label="@string/menu_about"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity
             android:name=".WipeDataConfirmActivity"
             android:label="@string/activitytittle_confirm_wipe"
             android:parentActivityName=".MainActivity">
+
         </activity>
         <activity android:name=".MainActivity">
             <intent-filter>

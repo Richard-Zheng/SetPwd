@@ -25,4 +25,6 @@
     <string name="toast_confirm_wipe_failed">Please check the text you entered</string>
     <string name="wipe_all_data_description">Are you sure you want to clear the data of this device? If you know the consequences of doing so and are still willing, enter \"yes\" in the input box below and click OK.</string>
     <string name="activitytittle_confirm_wipe">Confirm clear all data</string>
+    <string name="menu_about">About</string>
+    <string name="about_description">SetPwd can help you set a lock screen password in some inconvenient situations through device administrator permissions. \n\nFor example, when the device has its own security policies that prevent you from setting a password arbitrarily. \n\nAuthor: Richard Zheng \n\nSource: https://github.com/Richard-Zheng/SetPwd \n\nIf you have any problem, please post issues on GitHub.</string>
 </resources>

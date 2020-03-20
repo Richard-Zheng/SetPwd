@@ -51,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.wipe_all_data:
                 Intent intent = new Intent(MainActivity.this, WipeDataConfirmActivity.class);
                 startActivity(intent);
+            case R.id.about:
+                Intent intent2 = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent2);
             default:
         }
         return true;
