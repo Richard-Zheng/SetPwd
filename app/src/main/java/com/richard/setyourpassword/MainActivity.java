@@ -49,25 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, R.string.toast_set_maximum_failed_passwords_for_wipe, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.wipe_all_data:
-                AlertDialog dialog = new AlertDialog.Builder(this)
-                        .setMessage("确定删除此设备上的全部数据？")//设置对话框的内容
-                        //设置对话框的按钮
-                        .setNegativeButton(R.string.dialog_negative, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                //Toast.makeText(MainActivity.this, "取消", Toast.LENGTH_SHORT).show();
-                                dialog.dismiss();
-                            }
-                        })
-                        .setPositiveButton(R.string.dialog_positive, new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                dpm.wipeData(1);
-                                Toast.makeText(MainActivity.this, "重置...", Toast.LENGTH_SHORT).show();
-                                dialog.dismiss();
-                            }
-                        }).create();
-                dialog.show();
+                Intent intent = new Intent(MainActivity.this, WipeDataConfirmActivity.class);
+                startActivity(intent);
             default:
         }
         return true;

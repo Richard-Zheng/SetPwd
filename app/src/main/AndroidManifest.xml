@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".WipeDataConfirmActivity"
+            android:theme="@style/Theme.AppCompat.Dialog">
+        </activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,14 +20,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <receiver
             android:name=".MyAdmin"
             android:description="@string/device_admin_description"
             android:label="@string/device_admin"
-            android:permission="android.permission.BIND_DEVICE_ADMIN" ><!-- description和label都是strings.xml里配置的 -->
+            android:permission="android.permission.BIND_DEVICE_ADMIN"> <!-- description和label都是strings.xml里配置的 -->
             <meta-data
                 android:name="android.app.device_admin"
                 android:resource="@xml/device_admin" />
+
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
             </intent-filter>
