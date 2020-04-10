@@ -8,7 +8,7 @@ In some cases, you can't set lockscreen password on your Android device. For exa
 
 ## Shortcoming
 
-On Android 7 and higher version, this app can't set password when there already exists one. So you must clean your lockscreen password before using this app.
+On Android 7 and higher version, password can't be set when there already exists one. So you must clean your lockscreen password before using this app.
 
 ## Features
 
