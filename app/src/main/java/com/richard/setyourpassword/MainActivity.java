@@ -257,25 +257,3 @@ public class MainActivity extends AppCompatActivity implements PickMaximumAttemp
         }
     }
 }
-
-/*
-AlertDialog dialog = new AlertDialog.Builder(this)
-                    .setTitle("我是对话框")//设置对话框的标题
-                    .setMessage("我是对话框的内容")//设置对话框的内容
-                    //设置对话框的按钮
-                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(MainActivity.this, "点击了取消按钮", Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
-                    })
-                    .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            Toast.makeText(MainActivity.this, "点击了确定的按钮", Toast.LENGTH_SHORT).show();
-                            dialog.dismiss();
-                        }
-                    }).create();
-            dialog.show();
- */
