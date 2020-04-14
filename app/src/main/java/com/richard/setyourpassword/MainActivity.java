@@ -10,6 +10,8 @@ import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,6 +26,10 @@ public class MainActivity extends AppCompatActivity implements PickMaximumAttemp
     public ComponentName mDeviceAdminSample;
 
     private CheckBox checkbox_admin;
+    private CheckBox checkbox_show_password;
+
+    private EditText editText1;
+    private EditText editText2;
 
     public void showPickMaximumAttemptsDialog() {
         DialogFragment mPickMaximumAttemptsDialogFragment = new PickMaximumAttemptsDialogFragment();
@@ -59,8 +65,6 @@ public class MainActivity extends AppCompatActivity implements PickMaximumAttemp
         switch (item.getItemId()) {
             case R.id.set_maximum_failed_pwd:
                 showPickMaximumAttemptsDialog();
-                //dpm.setMaximumFailedPasswordsForWipe(mDeviceAdminSample, 5);
-                //Toast.makeText(MainActivity.this, R.string.toast_set_maximum_failed_passwords_for_wipe, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.wipe_all_data:
                 Intent intent = new Intent(MainActivity.this, WipeDataConfirmActivity.class);
@@ -90,8 +94,13 @@ public class MainActivity extends AppCompatActivity implements PickMaximumAttemp
         dpm = (DevicePolicyManager) getSystemService(DEVICE_POLICY_SERVICE);
         mDeviceAdminSample = new ComponentName(getApplicationContext(), MyAdmin.class);
 
+        editText1 = (EditText)findViewById(R.id.editText2);
+        editText2 = (EditText)findViewById(R.id.editText3);
+
         checkbox_admin = (CheckBox) findViewById(R.id.checkBoxAdmin);
-        isOpen();
+        isOpen();//判断设备管理员是否激活
+
+        checkbox_show_password = (CheckBox) findViewById(R.id.checkBox_show_password);
 
         checkbox_admin.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {//多选框勾选状态改变的监听器
             @Override
@@ -112,19 +121,28 @@ public class MainActivity extends AppCompatActivity implements PickMaximumAttemp
             }
         });
 
-
+        checkbox_show_password.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    editText1.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                    editText2.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                } else {
+                    editText1.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                    editText2.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
+            }
+        });
     }
 
     public void setPassword(View view) {
         if (isOpen()) {
             //获取文本框1的文本
             String str1="";
-            EditText editText1 =(EditText)findViewById(R.id.editText2);
             str1=editText1.getText().toString();
 
             //获取文本框2的文本
             String str2="";
-            EditText editText2 =(EditText)findViewById(R.id.editText3);
             str2=editText2.getText().toString();
 
             if (str1.equals(str2)) {

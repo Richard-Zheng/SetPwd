@@ -30,4 +30,5 @@
     <string name="version_update_history">Changelog</string>
     <string name="changelog_text" translatable="false"><big><big>1.2.1</big></big>\nImprove the About page\n\n<big><big>1.2</big></big> \nAdd confirmation page before clearing data\nAdd about page\nAdd version update history (incomplete)\n\n<big><big>1.1</big></big>\nAdd additional feature: set the maximum number of password attempts before clearing data\nAdd additional function: clear all data\nAdd "Activate Device Admin" checkbox\n\n<big><big>1.0</big></big>\nInit version</string>
     <string name="description_set_maximum_failed_passwords_for_wipe">Maximum number of failed passwords for wipe\nNote: 0 means unlimited</string>
+    <string name="checkbox_show_password">Show Password</string>
 </resources>
