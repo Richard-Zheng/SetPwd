@@ -14,7 +14,7 @@ On Android 7 and higher version, password can't be set when there already exists
 
 - Set lockscreen password
 
-- Enable clearing data after entering wrong password more than 5 times
+- Set the maximum number of failed password before wiping data
 
 - Erase all data (factory reset)
 
