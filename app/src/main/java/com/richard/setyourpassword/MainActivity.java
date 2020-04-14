@@ -3,6 +3,7 @@ package com.richard.setyourpassword;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
@@ -17,12 +18,24 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements PickMaximumAttemptsDialogFragment.MaxAttemptsInputListener{
 
     public DevicePolicyManager dpm;
     public ComponentName mDeviceAdminSample;
 
     private CheckBox checkbox_admin;
+
+    public void showPickMaximumAttemptsDialog() {
+        DialogFragment mPickMaximumAttemptsDialogFragment = new PickMaximumAttemptsDialogFragment();
+        mPickMaximumAttemptsDialogFragment.show(getSupportFragmentManager(), "PickMaximumAttemptsDialog");
+    }
+
+    //当DialogFragment中发生相应的点击事件时会自动调用到这里面的方法。
+    @Override
+    public void onMaxAttemptsInputComplete(DialogFragment dialog, int number) {
+        // 用户点击DialogFragment中的positive按钮
+        dpm.setMaximumFailedPasswordsForWipe(mDeviceAdminSample, number);
+    }
 
     //CheckAdminPermission
     private boolean isOpen() {
@@ -37,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater(). inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
@@ -45,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case R.id.set_maximum_failed_pwd:
-                dpm.setMaximumFailedPasswordsForWipe(mDeviceAdminSample, 5);
-                Toast.makeText(MainActivity.this, R.string.toast_set_maximum_failed_passwords_for_wipe, Toast.LENGTH_SHORT).show();
+                showPickMaximumAttemptsDialog();
+                //dpm.setMaximumFailedPasswordsForWipe(mDeviceAdminSample, 5);
+                //Toast.makeText(MainActivity.this, R.string.toast_set_maximum_failed_passwords_for_wipe, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.wipe_all_data:
                 Intent intent = new Intent(MainActivity.this, WipeDataConfirmActivity.class);
@@ -72,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         dpm = (DevicePolicyManager) getSystemService(DEVICE_POLICY_SERVICE);
         mDeviceAdminSample = new ComponentName(getApplicationContext(), MyAdmin.class);
 

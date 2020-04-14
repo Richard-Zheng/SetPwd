@@ -18,7 +18,7 @@
     <string name="checkbox_device_admin">授予设备管理员权限</string>
     <string name="toast_set_maximum_failed_passwords_for_wipe">已设置错误密码尝试上限为5，如需解除限制请取消设备管理员权限。</string>
     <string name="dialog_no_device_admin_permission">未获取到设备管理员权限</string>
-    <string name="menu_set_maximum_failed_passwords_for_wipe">设置超过5次错误密码清除所有数据</string>
+    <string name="menu_set_maximum_failed_passwords_for_wipe">最大错误密码尝试次数</string>
     <string name="menu_wipe_all_data">清除所有数据</string>
     <string name="toast_confirm_wipe_failed">请检查输入的文本</string>
     <string name="wipe_all_data_description">确定清空此设备的数据吗？如果你清楚这样做的后果并仍然愿意，请在下方的输入框中输入“yes”，再点击确定。</string>
