@@ -17,8 +17,8 @@ jobs:
       run: ./gradlew build
     - name: Build Debug APK
       run: ./gradlew assembleDebug
-    - name: Upload APK
+    - name: Archive code coverage results
         uses: actions/upload-artifact@v2
         with:
-          name: app
-          path: app/build/outputs/apk/debug/app-debug.apk
+          name: code-coverage-report
+          path: output/test/code-coverage.html
